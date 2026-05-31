@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Aarthi ❤️</title>
+
+<style>
+
+body{
+margin:0;
+padding:0;
+background:#ffe6f2;
+font-family:Arial,sans-serif;
+text-align:center;
+overflow:hidden;
+}
+
+.container{
+margin-top:120px;
+}
+
+h1{
+color:#ff1493;
+font-size:40px;
+}
+
+button{
+padding:15px 35px;
+font-size:22px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+margin:10px;
+}
+
+#yes{
+background:green;
+color:white;
+}
+
+#no{
+background:red;
+color:white;
+position:absolute;
+}
+
+.heart{
+position:absolute;
+font-size:30px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:1;
+}
+100%{
+transform:translateY(-100px);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+Aarthi 💖<br>
+Will You Marry Me? 💍
+</h1>
+
+<button id="yes" onclick="yesClicked()">
+YES ❤️
+</button>
+
+<button id="no">
+NO 😅
+</button>
+
+</div>
+
+<script>
+
+const noBtn=document.getElementById("no");
+
+noBtn.addEventListener("mouseover",()=>{
+
+noBtn.style.top=Math.random()*80+"%";
+noBtn.style.left=Math.random()*80+"%";
+
+});
+
+function yesClicked(){
+
+document.body.innerHTML=`
+
+<div style="margin-top:150px">
+
+<h1 style="color:#ff1493;">
+💖 Your Idiot Happy Princess 💖
+</h1>
+
+<h2>
+I Knew You Would Say Yes 😘💍
+</h2>
+
+<h3>
+Forever Starts Today ❤️
+</h3>
+
+</div>
+
+`;
+
+}
+
+setInterval(()=>{
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},500);
+
+</script>
+
+</body>
+</html>
